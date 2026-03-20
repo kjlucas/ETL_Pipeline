@@ -11,8 +11,8 @@ def validate_row(row: dict) -> Tuple[bool, Optional[str]]:
 
         datetime.strptime(date_str, "%Y-%m-%d")
 
-        #Validate the "Value" value
-        value = row.get("STLUR")
+        #Validate the "value" value
+        value = row.get("value")
         if value is None or value == "":
             return False, "Missing value"
 

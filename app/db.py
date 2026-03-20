@@ -4,6 +4,7 @@ from typing import Generator
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 from app.config import DB_URL
+from app.models import Base
 
 #Create connection to database
 engine = create_engine(DB_URL, future=True)
@@ -19,8 +20,6 @@ def get_db() -> Generator[Session, None, None]:
         yield db
     finally:
         db.close()
-
-from app.models import Base
 
 def init_db():
     #Initializes table
