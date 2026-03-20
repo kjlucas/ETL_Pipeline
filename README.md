@@ -25,6 +25,7 @@ This project was built to simulate real-world data engineering workflows similar
 - Value must be numeric
 - Duplicate records (date + series_id) are not inserted
 
+```
 ETL_pipeline/
 ├── app/
 │ ├── db.py
@@ -38,6 +39,7 @@ ETL_pipeline/
 │ └── schema.sql
 ├── logs/
 │ └── errors.log
-├── requirements.txt
+├── imports.txt
 ├── README.md
 └── main.py
+```

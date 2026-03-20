@@ -1,0 +1,7 @@
+CREATE TABLE data_series (
+    id SERIAL PRIMARY KEY,
+    date DATE NOT NULL,
+    series_id VARCHAR(5) NOT NULL,
+    value NUMERIC NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
