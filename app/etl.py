@@ -76,11 +76,11 @@ def run_etl(file_path, db):
 
     #Operation report
     report = {
-        "rows_extracted": total_rows,
-        "rows_transformed": len(df_transformed),
-        "rows_valid": len(valid_rows),
-        "rows_invalid": len(invalid_rows),
-        "rows_inserted": len(inserted_rows)
+        "Rows extracted": total_rows,
+        "Rows transformed": len(df_transformed),
+        "Valid rows ": len(valid_rows),
+        "Invalid rows ": len(invalid_rows),
+        "Rows inserted": len(inserted_rows)
     }
 
     print("ETL pipeline complete")
