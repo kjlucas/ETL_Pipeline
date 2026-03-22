@@ -38,7 +38,7 @@ def validate(dataframe):
 
 def load(valid_rows, db_session):
     #loads rows into session
-    for index, row in valid_rows:
+    for row in valid_rows:
         entry = DataSeries(date=pd.to_datetime(row["date"]).date(), value=row["value"], series_id=row["series_id"])
         db_session.add(entry)
 
@@ -80,7 +80,7 @@ def run_etl(file_path, db):
         "Rows transformed": len(df_transformed),
         "Valid rows ": len(valid_rows),
         "Invalid rows ": len(invalid_rows),
-        "Rows inserted": len(inserted_rows)
+        "Rows inserted": inserted_rows
     }
 
     print("ETL pipeline complete")

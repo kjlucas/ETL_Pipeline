@@ -14,4 +14,4 @@ if __name__ == '__main__':
     try:
         run_etl(DATA_FILE, db)
     finally:
-        db.session.close()
+        db.close()

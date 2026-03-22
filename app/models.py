@@ -11,7 +11,7 @@ class Base(DeclarativeBase):
 class DataSeries(Base):
     __tablename__ = "data_series"
 
-    __table_args__ = (UniqueConstraint("date", "series_id", name="unique_series_date"))
+    __table_args__ = (UniqueConstraint("date", "series_id", name="unique_series_date"),)
     id: Mapped[int] = mapped_column(primary_key=True)
     date: Mapped[Date] = mapped_column(Date, nullable=False)
     series_id: Mapped[str] = mapped_column(String(50), nullable=False)

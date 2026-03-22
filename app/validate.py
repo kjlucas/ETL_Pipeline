@@ -5,7 +5,7 @@ from typing import Tuple, Optional
 def validate_row(row: dict) -> Tuple[bool, Optional[str]]:
     try:
         #Validate the Date value
-        date_str = row.get("observation_date")
+        date_str = row.get("date")
         if not date_str:
             return False, "Missing date"
 
